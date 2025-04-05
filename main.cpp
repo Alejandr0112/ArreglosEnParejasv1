@@ -33,3 +33,21 @@ void mostrarDatos(string nombres[], float notas[], int cantidad) {
             cout << "(Eliminada)\n";
     }
 }
+
+void buscarPorNumero(string nombres[], float notas[], int cantidad) {
+    int numAlumno;
+    cout << "\nIngrese el numero del alumno (1 a " << cantidad << "): ";
+    cin >> numAlumno;
+
+    int index = numAlumno - 1;
+    if (index >= 0 && index < cantidad) {
+        cout << "Alumno: " << nombres[index] << " - Nota: ";
+        if (notas[index] >= 0)
+            cout << notas[index] << endl;
+        else
+            cout << "(Eliminada)\n";
+    } else {
+        cout << "Numero fuera de rango.\n";
+    }
+}
+

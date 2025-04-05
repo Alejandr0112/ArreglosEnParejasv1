@@ -80,3 +80,23 @@ void eliminarNota(string nombres[], float notas[], int cantidad) {
         cout << "Numero fuera de rango.\n";
     }
 }
+
+void guardarArchivo(string nombres[], float notas[], int cantidad) {
+    ofstream archivo("calificaciones.txt");
+
+    if (archivo.is_open()) {
+        archivo << "Registro de Calificaciones\n";
+        for (int i = 0; i < cantidad; i++) {
+            archivo << (i + 1) << ". " << nombres[i] << " - Nota: ";
+            if (notas[i] >= 0)
+                archivo << notas[i];
+            else
+                archivo << "(Eliminada)";
+            archivo << "\n";
+        }
+        archivo.close();
+        cout << "Datos guardados en calificaciones.txt\n";
+    } else {
+        cout << "Error al guardar el archivo.\n";
+    }
+}

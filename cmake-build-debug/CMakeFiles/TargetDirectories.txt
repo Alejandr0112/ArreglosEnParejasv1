@@ -1,0 +1,3 @@
+C:/Users/CompuFire/CLionProjects/ArreglosEnParejas/cmake-build-debug/CMakeFiles/ArreglosEnParejas.dir
+C:/Users/CompuFire/CLionProjects/ArreglosEnParejas/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/CompuFire/CLionProjects/ArreglosEnParejas/cmake-build-debug/CMakeFiles/rebuild_cache.dir

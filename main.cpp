@@ -66,3 +66,17 @@ void modificarNota(string nombres[], float notas[], int cantidad) {
         cout << "Numero fuera de rango.\n";
     }
 }
+
+void eliminarNota(string nombres[], float notas[], int cantidad) {
+    int numAlumno;
+    cout << "\nA que alumno queres eliminarle la nota? (1 a " << cantidad << "): ";
+    cin >> numAlumno;
+
+    int index = numAlumno - 1;
+    if (index >= 0 && index < cantidad) {
+        notas[index] = -1;
+        cout << "Nota eliminada con exito.\n";
+    } else {
+        cout << "Numero fuera de rango.\n";
+    }
+}

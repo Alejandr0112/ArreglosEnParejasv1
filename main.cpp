@@ -1,3 +1,5 @@
+//Oseas David Yuman Súchite 0909-23-2738
+//Erick Alejandro Marroquin Gonzalez 0909-23-6928
 #include <iostream>
 #include <fstream>
 using namespace std;
@@ -135,3 +137,5 @@ int main() {
 
     return 0;
 }
+//Oseas David Yuman Súchite 0909-23-2738
+//Erick Alejandro Marroquin Gonzalez 0909-23-6928

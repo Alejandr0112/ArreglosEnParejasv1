@@ -23,4 +23,13 @@ void ingresarDatos(string nombres[], float notas[], int& cantidad) {
     }
 }
 
-
+void mostrarDatos(string nombres[], float notas[], int cantidad) {
+    cout << "\n--- Lista de Calificaciones ---\n";
+    for (int i = 0; i < cantidad; i++) {
+        cout << (i + 1) << ". " << nombres[i] << " - Nota: ";
+        if (notas[i] >= 0)
+            cout << notas[i] << endl;
+        else
+            cout << "(Eliminada)\n";
+    }
+}

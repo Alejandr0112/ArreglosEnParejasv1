@@ -100,3 +100,38 @@ void guardarArchivo(string nombres[], float notas[], int cantidad) {
         cout << "Error al guardar el archivo.\n";
     }
 }
+
+int main() {
+    string nombres[MAX_ALUMNOS];
+    float notas[MAX_ALUMNOS];
+    int cantidad = 0;
+    int opcion;
+
+    do {
+        cout << "\n========= MENU =========\n";
+        cout << "1. Registrar alumnos y notas\n";
+        cout << "2. Mostrar todos los datos\n";
+        cout << "3. Buscar alumno por numero\n";
+        cout << "4. Modificar nota\n";
+        cout << "5. Eliminar nota\n";
+        cout << "6. Guardar en archivo\n";
+        cout << "0. Salir\n";
+        cout << "========================\n";
+        cout << "Elegi una opcion: ";
+        cin >> opcion;
+
+        switch (opcion) {
+            case 1: ingresarDatos(nombres, notas, cantidad); break;
+            case 2: mostrarDatos(nombres, notas, cantidad); break;
+            case 3: buscarPorNumero(nombres, notas, cantidad); break;
+            case 4: modificarNota(nombres, notas, cantidad); break;
+            case 5: eliminarNota(nombres, notas, cantidad); break;
+            case 6: guardarArchivo(nombres, notas, cantidad); break;
+            case 0: cout << "Saliendo del programa...\n"; break;
+            default: cout << "Opcion invalida.\n"; break;
+        }
+
+    } while (opcion != 0);
+
+    return 0;
+}

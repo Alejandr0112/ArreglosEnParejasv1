@@ -51,3 +51,18 @@ void buscarPorNumero(string nombres[], float notas[], int cantidad) {
     }
 }
 
+void modificarNota(string nombres[], float notas[], int cantidad) {
+    int numAlumno;
+    cout << "\nA que alumno queres modificarle la nota? (1 a " << cantidad << "): ";
+    cin >> numAlumno;
+
+    int index = numAlumno - 1;
+    if (index >= 0 && index < cantidad) {
+        cout << "Nota actual de " << nombres[index] << ": " << notas[index] << endl;
+        cout << "Ingrese la nueva nota: ";
+        cin >> notas[index];
+        cout << "Nota actualizada con exito.\n";
+    } else {
+        cout << "Numero fuera de rango.\n";
+    }
+}
